@@ -1,0 +1,13 @@
+.num {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  background: red;
+  float: left;
+  margin-right: 1em;
+  background: transparent url(slotnumbers.png) 0 0px repeat-y;
+}
+
+.clear {
+  clear: both;
+}
