@@ -28,7 +28,8 @@ function r(max) {
 }
 
 function choosenew() {
-  chosen = r(999);
+  var max = parseInt($('#maxroll').attr('value'));
+  chosen = r(max) + 1;
   $("#rand").html(chosen);
 }
 
@@ -56,8 +57,8 @@ function dostop(slot) {
 
   var s = slot;
   $(sel).css({backgroundPosition: "0px 0px"});
-  $(sel).animate({ backgroundPosition: "(0px " + offset + ")" }, time, 'linear', function() { stop(s + 1); });
-//  $(sel).css({backgroundPosition: "0px " + offset});
+  //$(sel).animate({ backgroundPosition: "(0px " + offset + ")" }, time, 'linear', function() { stop(s + 1); });
+  $(sel).animate({ backgroundPosition: "(0px " + offset + ")" }, time, 'linear');
 }
 
 function doit() {

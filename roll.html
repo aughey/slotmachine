@@ -17,13 +17,24 @@
     <p>
     <a href="#" onclick="doit()">Roll</a>
     </p>
-    <a href="#" onclick="stop(0)">Stop </a>
+    <a href="#" onclick="stop(0)">Stop 1</a>
+    <a href="#" onclick="stop(1)">Stop 2</a>
+    <a href="#" onclick="stop(2)">Stop 3</a>
+
+    <div>
+      <p>Maximum roll number <input type="text" id="maxroll" value="123"/></p>
+      This will choose a number between 1 and this maximum roll number
+      exclusive.  So if this number is 3, it can choose 1,2,3  If the
+      number is 10, it can choose 1 2 3 4 5 6 7 8 9 10.  Click "Choose a
+      new random number" if you change the maximum.
+    </div>
 
     <p>
     <a href="#" onclick="choosenew()">Choose a new random number</a>
     </p>
 
     <div id="rand"> </div>
+
 
     <script src="roll.js">
     </script>
