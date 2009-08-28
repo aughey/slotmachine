@@ -15,14 +15,16 @@
     <div class="clear"> </div>
 
     <p>
-    <a href="#" onclick="doit()">Roll</a>
+    <input type="button" value="Roll" onclick="doit()"/>
     </p>
-    <a href="#" onclick="stop(0)">Stop 1</a>
-    <a href="#" onclick="stop(1)">Stop 2</a>
-    <a href="#" onclick="stop(2)">Stop 3</a>
+    <input type="button" value="Stop 1" onclick="stop(0)"/>
+    <input type="button" value="Stop 2" onclick="stop(1)"/>
+    <input type="button" value="Stop 3" onclick="stop(2)"/>
 
     <div>
-      <p>Maximum roll number <input type="text" id="maxroll" value="123"/></p>
+      <p>Maximum roll number <input type="text" id="maxroll" value="123"/>
+    <input type="button" value="Choose a new random number" onclick="choosenew()"/>
+      </p>
       This will choose a number between 1 and this maximum roll number
       exclusive.  So if this number is 3, it can choose 1,2,3  If the
       number is 10, it can choose 1 2 3 4 5 6 7 8 9 10.  Click "Choose a
@@ -30,10 +32,8 @@
     </div>
 
     <p>
-    <a href="#" onclick="choosenew()">Choose a new random number</a>
+    Number chosen: <span id="rand"> </span>
     </p>
-
-    <div id="rand"> </div>
 
 
     <script src="roll.js">
