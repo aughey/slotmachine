@@ -8,6 +8,24 @@
   background: transparent url(slotnumbers.png) 0 0px repeat-y;
 }
 
+#prizes .winner {
+  border: 3px solid black;
+  width: 8em;
+  height: 8em;
+}
+
+#prizes .amount {
+  font-size: 5em;
+  font-weight: bold;
+  text-align: right;
+}
+
+#prizes {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
 .clear {
   clear: both;
 }

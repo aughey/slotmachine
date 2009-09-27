@@ -6,6 +6,7 @@
     <link href="roll.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <div id='numbers'>
     <div class="num" id="num0">
     </div>
     <div class="num" id="num1">
@@ -13,6 +14,31 @@
     <div class="num" id="num2">
     </div>
     <div class="clear"> </div>
+  </div>
+
+  <table id="prizes">
+    <tr>
+      <th></td><th>Ticket #</th>
+    </tr>
+    <tr id="1">
+      <td class="amount">$50</td><td><div class="winner"></div></td>
+    </tr>
+    <tr id="2">
+      <td class="amount">$100</td><td><div class="winner"></div></td>
+    </tr>
+    <tr id="3">
+      <td class="amount">$150</td><td><div class="winner"></div></td>
+    </tr>
+    <tr id="4">
+      <td class="amount">$200</td><td><div class="winner"></div></td>
+    </tr>
+    <tr id="5">
+      <td class="amount">$300</td><td><div class="winner"></div></td>
+    </tr>
+    <tr id="6">
+      <td class="amount">$Grand Prize $3,000</td><td><div class="winner"></div></td>
+    </tr>
+  </div>
 
     <p>
     <input type="button" value="Roll" onclick="doit()"/>
