@@ -20,35 +20,38 @@
     <tr>
       <th></td><th>Ticket #</th>
     </tr>
-    <tr id="1">
+    <tr class="prize" id="1">
       <td class="amount">$50</td><td><div class="winner"></div></td>
     </tr>
-    <tr id="2">
+    <tr class="prize" id="2">
       <td class="amount">$100</td><td><div class="winner"></div></td>
     </tr>
-    <tr id="3">
+    <tr class="prize" id="3">
       <td class="amount">$150</td><td><div class="winner"></div></td>
     </tr>
-    <tr id="4">
+    <tr class="prize" id="4">
       <td class="amount">$200</td><td><div class="winner"></div></td>
     </tr>
-    <tr id="5">
+    <tr class="prize" id="5">
       <td class="amount">$300</td><td><div class="winner"></div></td>
     </tr>
-    <tr id="6">
+    <tr class="prize" id="6">
       <td class="amount">$Grand Prize $3,000</td><td><div class="winner"></div></td>
     </tr>
   </div>
-
-    <p>
-    <input type="button" value="Roll" onclick="doit()"/>
-    </p>
     <input type="button" value="Stop 1" onclick="stop(0)"/>
     <input type="button" value="Stop 2" onclick="stop(1)"/>
     <input type="button" value="Stop 3" onclick="stop(2)"/>
 
-    <div>
-      <p>Maximum roll number <input type="text" id="maxroll" value="123"/>
+  <div id='prizeinfo'>
+  </div>
+
+    <p class="debuginfo">
+    <input type="button" value="Roll" onclick="doit()"/>
+    </p>
+
+    <div class='debuginfo'>
+      <p>Maximum roll number <input type="text" id="maxroll" value="500"/>
     <input type="button" value="Choose a new random number" onclick="choosenew()"/>
       </p>
       This will choose a number between 1 and this maximum roll number
@@ -57,7 +60,7 @@
       new random number" if you change the maximum.
     </div>
 
-    <p>
+    <p class="selecthide">
     Number chosen: <span id="rand"> </span>
     </p>
 

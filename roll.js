@@ -62,6 +62,10 @@ function dostop(slot) {
 }
 
 function doit() {
+  $('#num0').stop();
+  $('#num1').stop();
+  $('#num2').stop();
+
   numfunctions[0] = reanimate;
   numfunctions[1] = reanimate;
   numfunctions[2] = reanimate;
@@ -74,6 +78,14 @@ function stop(num) {
   numfunctions[num] = dostop;
 }
 
+function loadprize() {
+  var amount = $(this).find('.amount').html();
+  $('#prizeinfo').html(amount);
+  choosenew();
+  doit();
+}
+
 $(function() {
+    $('.prize').click(loadprize);
     choosenew();
     });
