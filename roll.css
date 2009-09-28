@@ -18,8 +18,10 @@ body {
 
 #prizes .winner {
   border: 3px solid black;
-  width: 7em;
-  height: 7em;
+/*  width: 7em; */
+  height: 1em;
+  text-align: center;
+  font-size: 4em;
 }
 
 .debuginfo {

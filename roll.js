@@ -64,7 +64,9 @@ function dostop(slot) {
 function slotstopped(slot) {
   numfunctions[slot] = null;
   if(numfunctions[0] == null && numfunctions[1] == null && numfunctions[2] == null) {
-    alert("all done");
+    var winner = $("#" + curroll).find('.winner');
+    winner.html(chosen);
+    winner.css('background-color','lightgreen');
   }
 }
 
@@ -85,7 +87,13 @@ function stop(num) {
   numfunctions[num] = dostop;
 }
 
+var curroll = null;
+
 function loadprize() {
+  if( $(this).find('.winner').html() != "") {
+    return;
+  }
+  curroll = this.id;
   var amount = $(this).find('.amount').html();
   $('#prizeinfo').html(amount);
   choosenew();
