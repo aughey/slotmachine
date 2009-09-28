@@ -6,64 +6,68 @@
     <link href="roll.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id='numbers'>
-    <div class="num" id="num0">
-    </div>
-    <div class="num" id="num1">
-    </div>
-    <div class="num" id="num2">
-    </div>
-    <div class="clear"> </div>
-  </div>
-
-  <table id="prizes">
-    <tr>
-      <th></td><th>Ticket #</th>
-    </tr>
-    <tr class="prize" id="prize1">
-      <td class="amount">$50</td><td><div class="winner"></div></td>
-    </tr>
-    <tr class="prize" id="prize2">
-      <td class="amount">$100</td><td><div class="winner"></div></td>
-    </tr>
-    <tr class="prize" id="prize3">
-      <td class="amount">$150</td><td><div class="winner"></div></td>
-    </tr>
-    <tr class="prize" id="prize4">
-      <td class="amount">$200</td><td><div class="winner"></div></td>
-    </tr>
-    <tr class="prize" id="prize5">
-      <td class="amount">$300</td><td><div class="winner"></div></td>
-    </tr>
-    <tr class="prize" id="prize6">
-      <td class="amount">$Grand Prize $3,000</td><td><div class="winner"></div></td>
-    </tr>
-  </div>
-    <input type="button" value="Stop 1" onclick="stop(0)"/>
-    <input type="button" value="Stop 2" onclick="stop(1)"/>
-    <input type="button" value="Stop 3" onclick="stop(2)"/>
-
-  <div id='prizeinfo'>
-  </div>
-
-    <p class="debuginfo">
-    <input type="button" value="Roll" onclick="doit()"/>
-    </p>
-
-    <div class='debuginfo'>
+    <div id='configtime'>
       <p>Maximum roll number <input type="text" id="maxroll" value="500"/>
-    <input type="button" value="Choose a new random number" onclick="choosenew()"/>
-      </p>
-      This will choose a number between 1 and this maximum roll number
-      exclusive.  So if this number is 3, it can choose 1,2,3  If the
-      number is 10, it can choose 1 2 3 4 5 6 7 8 9 10.  Click "Choose a
-      new random number" if you change the maximum.
+      <input type="button" value="Run the event" onclick="runevent"/>
     </div>
+    <div id='showtime'>
+      <div id='numbers'>
+        <div class="num" id="num0">
+        </div>
+        <div class="num" id="num1">
+        </div>
+        <div class="num" id="num2">
+        </div>
+        <div class="clear"> </div>
+      </div>
 
-    <p class="selecthide">
-    Number chosen: <span id="rand"> </span>
-    </p>
+      <table id="prizes">
+        <tr>
+          <th></td><th>Ticket #</th>
+        </tr>
+        <tr class="prize" id="prize1">
+          <td class="amount">$50</td><td><div class="winner"></div></td>
+        </tr>
+        <tr class="prize" id="prize2">
+          <td class="amount">$100</td><td><div class="winner"></div></td>
+        </tr>
+        <tr class="prize" id="prize3">
+          <td class="amount">$150</td><td><div class="winner"></div></td>
+        </tr>
+        <tr class="prize" id="prize4">
+          <td class="amount">$200</td><td><div class="winner"></div></td>
+        </tr>
+        <tr class="prize" id="prize5">
+          <td class="amount">$300</td><td><div class="winner"></div></td>
+        </tr>
+        <tr class="prize" id="prize6">
+          <td class="amount">Grand Prize $3,000</td><td><div class="winner"></div></td>
+        </tr>
+      </div>
+      <input type="button" value="Stop 1" onclick="stop(0)"/>
+      <input type="button" value="Stop 2" onclick="stop(1)"/>
+      <input type="button" value="Stop 3" onclick="stop(2)"/>
 
+      <div id='prizeinfo'>
+      </div>
+
+      <p class="debuginfo">
+      <input type="button" value="Roll" onclick="doit()"/>
+      </p>
+
+      <div class='debuginfo'>
+        <input type="button" value="Choose a new random number" onclick="choosenew()"/>
+        </p>
+        This will choose a number between 1 and this maximum roll number
+        exclusive.  So if this number is 3, it can choose 1,2,3  If the
+        number is 10, it can choose 1 2 3 4 5 6 7 8 9 10.  Click "Choose a
+        new random number" if you change the maximum.
+      </div>
+
+      <p class="selecthide">
+      Number chosen: <span id="rand"> </span>
+      </p>
+    </div>
 
     <script src="roll.js">
     </script>

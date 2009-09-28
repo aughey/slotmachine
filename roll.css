@@ -16,6 +16,10 @@ body {
   background: transparent url(slotnumbers.png) 0 0px repeat-y;
 }
 
+.prize {
+  cursor: pointer;
+}
+
 #prizes .winner {
   border: 3px solid black;
 /*  width: 7em; */
@@ -25,6 +29,10 @@ body {
 }
 
 .debuginfo {
+  display: none;
+}
+
+#showtime {
   display: none;
 }
 

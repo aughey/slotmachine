@@ -101,6 +101,11 @@ function loadprize() {
   doit();
 }
 
+function runevent() {
+  $('#configtime').hide();
+  $('#showtime').hide();
+}
+
 $(function() {
     $('.prize').click(loadprize);
     choosenew();
