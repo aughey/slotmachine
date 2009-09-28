@@ -58,7 +58,14 @@ function dostop(slot) {
   var s = slot;
   $(sel).css({backgroundPosition: "0px 0px"});
   //$(sel).animate({ backgroundPosition: "(0px " + offset + ")" }, time, 'linear', function() { stop(s + 1); });
-  $(sel).animate({ backgroundPosition: "(0px " + offset + ")" }, time, 'linear');
+  $(sel).animate({ backgroundPosition: "(0px " + offset + ")" }, time, 'linear', function() { slotstopped(s) });
+}
+
+function slotstopped(slot) {
+  numfunctions[slot] = null;
+  if(numfunctions[0] == null && numfunctions[1] == null && numfunctions[2] == null) {
+    alert("all done");
+  }
 }
 
 function doit() {
