@@ -103,7 +103,7 @@ function loadprize() {
 
 function runevent() {
   $('#configtime').hide();
-  $('#showtime').hide();
+  $('#showtime').show();
 }
 
 $(function() {
