@@ -62,6 +62,7 @@ function dostop(slot) {
 }
 
 function slotstopped(slot) {
+  $('#num' + slot).css('border','4px solid green');
   numfunctions[slot] = null;
   if(numfunctions[0] == null && numfunctions[1] == null && numfunctions[2] == null) {
     var winner = $("#" + curroll).find('.winner');
@@ -71,9 +72,9 @@ function slotstopped(slot) {
 }
 
 function doit() {
-  $('#num0').stop();
-  $('#num1').stop();
-  $('#num2').stop();
+  $('#num0').stop().css('border','1px solid black');
+  $('#num1').stop().css('border','1px solid black');
+  $('#num2').stop().css('border','1px solid black');
 
   numfunctions[0] = reanimate;
   numfunctions[1] = reanimate;
