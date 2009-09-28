@@ -29,7 +29,12 @@ function r(max) {
 
 function choosenew() {
   var max = parseInt($('#maxroll').attr('value'));
-  chosen = r(max) + 1;
+  var repick=true;
+  while(repick) {
+    repick = false;
+    chosen = r(max) + 1;
+    $('.prize .winner').each(function(i,v) { if($(v).html() == String(chosen)) { repick = true; } });
+  }
   $("#rand").html(chosen);
 }
 
@@ -109,4 +114,9 @@ function runevent() {
 $(function() {
     $('.prize').click(loadprize);
     choosenew();
+
+    var amount = $('.amount');
+    var h = $(window).height() / amount.size() * 0.70;
+    $('.prize').css('font-size',String(h) + 'px');
+
     });

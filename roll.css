@@ -25,7 +25,6 @@ body {
 /*  width: 7em; */
   height: 1em;
   text-align: center;
-  font-size: 4em;
 }
 
 .debuginfo {
@@ -40,8 +39,11 @@ body {
   font-size: 10em;
 }
 
-#prizes .amount {
+.prize {
   font-size: 5em;
+}
+
+#prizes .amount {
   font-weight: bold;
   text-align: right;
 }
