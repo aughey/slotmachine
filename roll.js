@@ -113,16 +113,29 @@ function loadprize() {
 }
 
 function runevent() {
+  var max = parseInt($('#numprizes').attr('value'));
+  var incr = parseInt($('#prizeincr').attr('value'));  
+  var dollar = parseInt($('#startdollar').attr('value'));  
+  var prizes = $('#prizes');
+  var i;
+  for(i=1;i<=max;i++) {
+    prizes.append("<tr class='prize' id='prize" + i + "'><td class='amount'>$" + dollar + "</td><td><div class='winner'></div></td></tr>");
+    dollar += incr;
+  }
+  prizes.append("<tr class='prize' id='prize" + i + "'><td class='amount'>Grand Prize $3,000</td><td><div class='winner'></div></td></tr>");
+
+  var prize = $('.prize');
+  var h = $(window).height() / prize.size() * 0.70;
+  prize.css('font-size',String(h) + 'px');
+
+  prize.click(loadprize);
+  
   $('#configtime').hide();
   $('#showtime').show();
 }
 
 $(function() {
-    $('.prize').click(loadprize);
     choosenew();
 
-    var amount = $('.amount');
-    var h = $(window).height() / amount.size() * 0.70;
-    $('.prize').css('font-size',String(h) + 'px');
 
     });

@@ -9,11 +9,23 @@
   </head>
   <body>
     <div id='configtime'>
-      <p>Maximum roll number <input type="text" id="maxroll" value="500"/>
-      </p>
       <p>This number is the last ticket sold.  If the last ticket sold
       is 520 and you enter 520 in the box above, the system will choose
       numbers between 1 and 520 including both 1 and 520</p>
+
+      <p>Maximum roll number <input type="text" id="maxroll" value="500"/>
+      </p>
+
+
+      <p>Starting dollar amount <input type="text" id="startdollar" value="30"/>
+      </p>
+
+      <p>Number of prizes before the grand prize <input type="text" id="numprizes" value="5"/>
+      </p>
+
+      <p>Prize increment before grand prize<input type="text" id="prizeincr" value="30"/>
+      </p>
+
 
       <input type="button" value="Run the event" onclick="runevent()"/>
     </div>
@@ -32,6 +44,7 @@
         <tr>
           <th></td><th>Ticket #</th>
         </tr>
+        <!--
         <tr class="prize" id="prize1">
           <td class="amount">$50</td><td><div class="winner"></div></td>
         </tr>
@@ -50,6 +63,7 @@
         <tr class="prize" id="prize6">
           <td class="amount">Grand Prize $3,000</td><td><div class="winner"></div></td>
         </tr>
+        -->
       </div>
       <input type="button" value="Stop 1" onclick="stop(0)"/>
       <input type="button" value="Stop 2" onclick="stop(1)"/>
