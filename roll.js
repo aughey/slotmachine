@@ -106,7 +106,7 @@ function loadprize() {
   $('#prizeinfo').stop();
   $('#prizeinfo').css('backgroundColor','white');
   if(amount == "Grand Prize $3,000") {
-    $('#prizeinfo').pulse({backgroundColors: ['white','lightgreen']}, 2000);
+    $('#prizeinfo').pulse({backgroundColors: ['white','pink']}, 2000);
   }
   choosenew();
   doit();
