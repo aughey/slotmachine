@@ -35,6 +35,10 @@ body {
   display: none;
 }
 
+.d {
+  display: inline;
+}
+
 #prizeinfo {
   font-size: 10em;
   display: inline;

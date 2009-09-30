@@ -99,12 +99,20 @@ function loadprize() {
   if( $(this).find('.winner').html() != "") {
     return;
   }
+
   curroll = this.id;
+
+  $('.d').css('border','none');
+  $(this).find('.d').css('border','10px solid green');
+/*
   var amount = $(this).find('.amount').html();
+
   $('#prizeinfo').html(amount);
   // $('#prizeinfo').animate({backgroundColor: 'red'}, 2000);
   $('#prizeinfo').stop();
   $('#prizeinfo').css('backgroundColor','white');
+  */
+
   /*
   if(amount == "Grand Prize $3,000") {
     $('#prizeinfo').pulse({backgroundColors: ['white','pink']}, 2000);
@@ -121,10 +129,10 @@ function runevent() {
   var prizes = $('#prizes');
   var i;
   for(i=1;i<=max;i++) {
-    prizes.append("<tr class='prize' id='prize" + i + "'><td class='amount'>$" + dollar + "</td><td><div class='winner'></div></td></tr>");
+    prizes.append("<tr class='prize' id='prize" + i + "'><td class='amount'><div class='d'>$" + dollar + "</div></td><td><div class='winner'></div></td></tr>");
     dollar += incr;
   }
-  prizes.append("<tr class='prize' id='prize" + i + "'><td class='amount'>Grand Prize $3,000</td><td><div class='winner'></div></td></tr>");
+  prizes.append("<tr class='prize' id='prize" + i + "'><td class='amount'><div class='d'>Grand Prize $3,000</div></td><td><div class='winner'></div></td></tr>");
 
   var prize = $('.prize');
   var h = $(window).height() / prize.size() * 0.70;
