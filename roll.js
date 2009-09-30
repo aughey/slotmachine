@@ -102,6 +102,12 @@ function loadprize() {
   curroll = this.id;
   var amount = $(this).find('.amount').html();
   $('#prizeinfo').html(amount);
+  // $('#prizeinfo').animate({backgroundColor: 'red'}, 2000);
+  $('#prizeinfo').stop();
+  $('#prizeinfo').css('backgroundColor','white');
+  if(amount == "Grand Prize $3,000") {
+    $('#prizeinfo').pulse({backgroundColors: ['white','lightgreen']}, 2000);
+  }
   choosenew();
   doit();
 }

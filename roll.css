@@ -37,6 +37,7 @@ body {
 
 #prizeinfo {
   font-size: 10em;
+  display: inline;
 }
 
 .prize {
